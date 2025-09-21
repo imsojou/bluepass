@@ -159,7 +159,7 @@ function openModal(videoId: string) {
     <iframe
       src="https://www.youtube.com/embed/${videoId}?autoplay=1"
       frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
       allowfullscreen
       title="YouTube video player">
     </iframe>
