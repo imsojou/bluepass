@@ -1,4 +1,3 @@
-
 :root {
   --background: #16226C;
   --surface: #21328a;
@@ -64,67 +63,58 @@ main {
 
 /* Service Links Section */
 #services {
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2.5rem 1.5rem;
 }
 
 .service-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  background: linear-gradient(145deg, #25379a, #1f2d82);
-  border-radius: 15px;
+  gap: 0.6rem;
   text-decoration: none;
   color: var(--text-primary);
-  border: 1px solid #2a3a9a;
-  box-shadow: 5px 5px 12px #152061, -5px -5px 12px #273eab;
-  transition: all 0.2s ease-in-out;
+  border-radius: 16px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .service-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 8px 8px 16px #152061, -8px -8px 16px #273eab;
-}
-
-.service-item:active {
-  transform: translateY(1px);
-  box-shadow: inset 5px 5px 12px #152061, inset -5px -5px 12px #273eab;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .service-icon {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--background);
-  border-radius: 50%;
-  box-shadow: inset 3px 3px 6px #111a56, inset -3px -3px 6px #1b2aa2;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease-in-out;
+}
+
+.service-item:hover .service-icon {
+  transform: scale(1.05) translateY(-2px);
 }
 
 .service-icon svg {
-  width: 22px;
-  height: 22px;
-  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.service-item:hover .service-icon svg {
-    transform: scale(1.1);
+  width: 18px;
+  height: 18px;
+  color: var(--text-primary);
 }
 
 /* Icon Colors */
-.service-item:nth-child(1) .service-icon svg { color: #ffd700; }
-.service-item:nth-child(2) .service-icon svg { color: #00e5ff; }
-.service-item:nth-child(3) .service-icon svg { color: #ff9800; }
-.service-item:nth-child(4) .service-icon svg { color: #4caf50; }
-.service-item:nth-child(5) .service-icon svg { color: #ff4081; }
-.service-item:nth-child(6) .service-icon svg { color: #9c27b0; }
+.service-item:nth-child(1) .service-icon { background: linear-gradient(135deg, #2ecc71, #28b463); } /* Green */
+.service-item:nth-child(2) .service-icon { background: linear-gradient(135deg, #f1c40f, #f39c12); } /* Yellow */
+.service-item:nth-child(3) .service-icon { background: linear-gradient(135deg, #9b59b6, #8e44ad); } /* Purple */
+.service-item:nth-child(4) .service-icon { background: linear-gradient(135deg, #5dade2, #3498db); } /* Light Blue */
+.service-item:nth-child(5) .service-icon { background: linear-gradient(135deg, #e74c3c, #c0392b); } /* Red */
+.service-item:nth-child(6) .service-icon { background: linear-gradient(135deg, #3498db, #2980b9); } /* Blue */
+
 
 .service-text {
   display: flex;
@@ -132,14 +122,14 @@ main {
 }
 
 .service-text strong {
-  font-weight: 500;
-  font-size: 0.85rem;
+  font-weight: 700;
+  font-size: 1rem;
   color: var(--text-primary);
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .service-text span {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   line-height: 1.2;
   color: var(--text-secondary);
 }
@@ -505,6 +495,7 @@ footer {
 @media (max-width: 900px) {
   #services {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
   }
 }
 
@@ -523,32 +514,32 @@ footer {
   }
 
   #services {
-    padding: 1rem 0.75rem;
-    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem 1rem;
     grid-template-columns: repeat(2, 1fr);
   }
 
   .service-item {
-    padding: 0.75rem;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .service-icon {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
   }
 
   .service-icon svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 
   .service-text strong {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .service-text span {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 
   #categories {
