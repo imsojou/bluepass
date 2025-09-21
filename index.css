@@ -34,7 +34,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: rgba(22, 34, 108, 0.9);
+  background: linear-gradient(-45deg, #16226C, #2a3a9a, #21328a, #5d68d9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-color);
@@ -542,6 +544,12 @@ footer {
     align-items: stretch;
   }
 
+  #video-url-input,
+  .select-wrapper {
+    /* Reset flex properties for vertical layout to fix width overflow. */
+    flex: initial;
+  }
+
   #add-video-form button {
     padding: 0.8rem;
   }
@@ -554,5 +562,18 @@ footer {
     top: -40px;
     right: 0px;
     font-size: 3rem;
+  }
+}
+
+/* Keyframe animation for the header background */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
